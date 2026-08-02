@@ -1,0 +1,294 @@
+/* ==========================
+   MY HERO - STYLE.CSS
+========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:white;
+font-family:Arial, sans-serif;
+overflow-x:hidden;
+}
+
+/* Animated Background */
+
+#stars{
+position:fixed;
+width:100%;
+height:100%;
+background:url("https://www.transparenttextures.com/patterns/stardust.png");
+opacity:.25;
+z-index:-2;
+animation:stars 70s linear infinite;
+}
+
+@keyframes stars{
+from{transform:translateY(0);}
+to{transform:translateY(-1500px);}
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+.hero-image{
+width:240px;
+height:240px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid gold;
+box-shadow:0 0 35px gold;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+}
+
+.glow{
+font-size:60px;
+font-family:'Cinzel',serif;
+color:gold;
+text-shadow:
+0 0 10px gold,
+0 0 25px gold,
+0 0 40px gold;
+margin-top:25px;
+}
+
+.subtitle{
+font-size:24px;
+margin-top:15px;
+color:#ddd;
+}
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:15px 35px;
+background:gold;
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:40px;
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px gold;
+}
+
+/* Sections */
+
+section{
+padding:90px 10%;
+text-align:center;
+}
+
+h2{
+font-size:40px;
+color:gold;
+margin-bottom:30px;
+font-family:'Cinzel',serif;
+}
+
+.about-image{
+width:320px;
+max-width:90%;
+border-radius:20px;
+border:3px solid gold;
+margin:30px 0;
+transition:.4s;
+}
+
+.about-image:hover{
+transform:scale(1.05);
+}
+
+.about p{
+font-size:24px;
+font-family:'Noto Nastaliq Urdu',serif;
+line-height:2.3;
+}
+
+/* Cards */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:rgba(255,215,0,.08);
+backdrop-filter:blur(10px);
+padding:25px;
+border:1px solid gold;
+border-radius:20px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px gold;
+}
+
+.card h3{
+color:gold;
+margin-bottom:15px;
+}
+
+/* Messages */
+
+.message{
+background:#111;
+border-left:5px solid gold;
+padding:20px;
+margin:20px auto;
+max-width:850px;
+font-size:24px;
+font-family:'Noto Nastaliq Urdu',serif;
+border-radius:12px;
+transition:.4s;
+}
+
+.message:hover{
+transform:scale(1.03);
+box-shadow:0 0 20px gold;
+}
+
+/* Gallery */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.gallery-grid img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:20px;
+border:3px solid gold;
+transition:.4s;
+cursor:pointer;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.08);
+box-shadow:0 0 30px gold;
+}
+
+/* Music */
+
+.music audio{
+margin-top:20px;
+width:320px;
+}
+
+/* Ending */
+
+.ending-photo{
+width:260px;
+height:260px;
+border-radius:50%;
+border:5px solid gold;
+box-shadow:0 0 30px gold;
+margin-bottom:35px;
+}
+
+.ending h1{
+font-size:45px;
+color:gold;
+font-family:'Noto Nastaliq Urdu',serif;
+text-shadow:0 0 15px gold;
+line-height:2;
+}
+
+.ending p{
+margin-top:30px;
+font-size:22px;
+}
+
+/* Footer */
+
+footer{
+background:black;
+padding:35px;
+text-align:center;
+color:gold;
+font-size:20px;
+}
+
+/* Floating Hearts */
+
+.heart{
+position:fixed;
+bottom:-40px;
+font-size:22px;
+color:gold;
+animation:rise 8s linear forwards;
+pointer-events:none;
+}
+
+@keyframes rise{
+0%{
+transform:translateY(0) scale(.5);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) scale(1.8);
+opacity:0;
+}
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.glow{
+font-size:38px;
+}
+
+.subtitle{
+font-size:18px;
+}
+
+h2{
+font-size:30px;
+}
+
+.message{
+font-size:20px;
+}
+
+.hero-image{
+width:180px;
+height:180px;
+}
+
+.ending h1{
+font-size:32px;
+}
+
+  }
