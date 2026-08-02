@@ -1,0 +1,214 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#7c3aed);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+    overflow-x:hidden;
+    color:white;
+    text-align:center;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+    animation:fadeDown 1.2s ease;
+    text-shadow:0 0 20px rgba(255,255,255,.5);
+}
+
+.hero h2{
+    font-size:32px;
+    color:#ffd166;
+    margin-bottom:25px;
+    animation:fadeDown 1.6s ease;
+}
+
+.hero p{
+    max-width:750px;
+    line-height:1.8;
+    font-size:20px;
+    animation:fadeUp 2s ease;
+}
+
+button{
+    margin-top:40px;
+    padding:18px 45px;
+    font-size:20px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    background:#ff4d6d;
+    color:white;
+    transition:.35s;
+    box-shadow:0 0 25px rgba(255,77,109,.6);
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 45px rgba(255,77,109,.9);
+}
+
+.hidden{
+    display:none;
+}
+
+#message{
+    max-width:900px;
+    margin:auto;
+    margin-top:80px;
+    margin-bottom:80px;
+    padding:45px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    border-radius:25px;
+    animation:fadeUp 1s ease;
+}
+
+#message h2{
+    margin-bottom:30px;
+    color:#ffe066;
+    font-size:38px;
+}
+
+#message p{
+    line-height:2;
+    font-size:22px;
+    white-space:pre-line;
+}
+
+.qualities{
+    padding:90px 20px;
+}
+
+.qualities h2{
+    font-size:42px;
+    margin-bottom:45px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.card{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    padding:35px;
+    border-radius:20px;
+    font-size:24px;
+    transition:.35s;
+    box-shadow:0 0 20px rgba(255,255,255,.15);
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    background:rgba(255,255,255,.2);
+}
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.heart{
+    position:absolute;
+    color:#ff8fab;
+    animation:float linear forwards;
+    opacity:.85;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh) rotate(0deg);
+    }
+    to{
+        transform:translateY(-120vh) rotate(360deg);
+    }
+}
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-60px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero h2{
+    font-size:24px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+button{
+    font-size:18px;
+    padding:16px 35px;
+}
+
+#message{
+    padding:30px;
+}
+
+#message h2{
+    font-size:30px;
+}
+
+#message p{
+    font-size:18px;
+}
+
+.card{
+    font-size:20px;
+}
+
+  }
