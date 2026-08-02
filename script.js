@@ -106,3 +106,12 @@ setInterval(()=>{
     });
 
 },2500);
+
+const enterBtn = document.getElementById("enterBtn");
+const welcomeScreen = document.getElementById("welcome-screen");
+
+enterBtn.addEventListener("click", () => {
+
+    welcomeScreen.classList.add("fadeOut");
+
+});
